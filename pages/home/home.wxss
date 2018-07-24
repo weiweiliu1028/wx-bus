@@ -1,0 +1,20 @@
+.page__bd {
+  width: 100%;
+}
+
+.weui-search-bar {
+  background-color: #fff;
+  border: none;
+}
+
+.weui-search-bar__label {
+  width: 100%;
+}
+
+.weui-search-bar__form {
+  border: 2rpx solid #e9eaec;
+}
+
+.weui-cells {
+  margin-top: 0.17647059em;
+}

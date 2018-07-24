@@ -1,0 +1,39 @@
+.container {
+  height: 47px;
+}
+
+.recommend-list {
+  height: 40px;
+  width: 100%;
+  border-bottom: 2rpx solid #e9eaec;
+}
+
+.recommend-train {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #093;
+  background-color: #093;
+  color: #fff;
+  width: 45px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.recommend-wenzi {
+  font-size: 10px;
+  margin-left: 10px;
+  color: #d2d2d2;
+  margin-top: 7px;
+}
+.recommend-right {
+  font-size: 14px;
+  color: #000;
+  margin-top: -5px;
+}
+
+.recommend-top {
+  color: #8a8a8a;
+}

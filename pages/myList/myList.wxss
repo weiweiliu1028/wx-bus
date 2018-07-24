@@ -1,0 +1,96 @@
+.mylist-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mylist-portrait {
+  width: 100%;
+  height: 100px;
+  background: #093;
+}
+
+.mylist-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+  margin-left: 10px;
+  margin-top: 18px;
+}
+
+.mylist-center1 {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.mylist-setUp {
+  height: 130px;
+  border-top: 2rpx solid #e9eaec;
+  border-bottom: 2rpx solid #e9eaec;
+}
+
+.mylist-top {
+  height: 10px;
+  background-color: #e6e6e6;
+}
+
+.mylist-setUp-title {
+  width: 93%;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 2rpx solid #e9eaec;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.mylist-setUp-top {
+  width: 93%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 2rpx solid #e9eaec;
+  margin-left: 24px;
+  font-size: 14px;
+  color: #000;
+  overflow: hidden;
+}
+
+.mylist-right-slider {
+  margin-top: -10px;
+}
+
+.weui-select {
+  margin-top: 17px;
+  overflow: hidden;
+}
+
+.mylist-miao {
+  color: #8d8f8e;
+  margin-left: -15px;
+}
+
+.mylist-dress {
+  font-size: 14px;
+}
+
+.my-item-icon-view {
+  margin-top: 5px;
+}
+
+.my-item-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.my-edit-false {
+  color: #8a8a8a;
+}
+
+.my-refresh-time::after {
+  color: #8a8a8a;
+  font-size: 14px;
+  margin-left: -15px;
+  content: "秒";
+}

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/recommend/recommend",
+    "pages/nearby/nearby",
+    "pages/myList/myList",
+    "pages/busline/busline"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#009933",
+    "navigationBarTitleText": "实时公交车",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "selectedIconPath": "./image/homepage.png",
+        "iconPath": "./image/homepage-1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/nearby/nearby",
+        "selectedIconPath": "./image/nearby_selected.png",
+        "iconPath": "./image/nearby.png",
+        "text": "附近"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "selectedIconPath": "./image/like_fill.png",
+        "iconPath": "./image/like.png",
+        "text": "收藏"
+      },
+      {
+        "pagePath": "pages/myList/myList",
+        "selectedIconPath": "./image/me_selected.png",
+        "iconPath": "./image/me.png",
+        "text": "我"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

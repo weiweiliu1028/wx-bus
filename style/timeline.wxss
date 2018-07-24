@@ -1,0 +1,122 @@
+@import "alifont.wxss";
+
+.timeline {
+  border-left: 1px solid #d9d9d9;
+  padding-bottom: 30px;
+  position: relative;
+  /*list-style: none;*/
+  margin-left: 30px;
+  margin-top: 15px;
+  padding: 0;
+
+  flex-direction: column;
+  display: flex;
+}
+
+/*node and station*/
+.tl-node,.tl-local {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  padding: 3px 0px 15px 10px;
+  margin-bottom: 0px;
+}
+.tl-station {
+  font-size: 13px;
+  color: #515151;
+  margin-left: 6px;
+}
+.tl-node::before {
+  content: " ";
+  position: absolute;
+  left: -3px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #d9d9d9;
+  /*z-index: -1;*/
+}
+
+/* local node */
+.tl-local {
+  background-color: #f2f8fb;
+  /*padding-bottom: 3px;*/
+}
+.tl-local::before {
+  content: "\e63b";
+  position: absolute;
+  top: -5px;
+  left: -11px;
+  width: 22px;
+  height: 22px;
+
+  color: red;
+  font-family: 'iconfont';
+  font-size: 20px;
+}
+.tl-local .tl-station {
+  font-weight:600;
+  color: #515151;
+}
+.tl-local .tl-station::after {
+  content: "(离我最近)";
+  color: red;
+  margin-left: 2px;
+}
+.tl-nearest-buses {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  /*height: 40px;*/
+}
+.tl-nearest-bus {
+  /*width: 30%;*/
+  padding-right: 10%;
+  display: flex;
+  flex-direction: row;
+  padding-top:6px;
+  padding-left:10px;
+}
+.tl-nearest-bus-num {
+  font-sise: 20px;
+  font-weight: 500;
+  color: #1296db;
+}
+.tl-nearest-bus-num:after{
+  content: "站";
+  font-size: 14px;
+  font-weight: 400;
+}
+.tl-nearest-bus-dis {
+  font-size: 12px;
+  color: #bfbfbf;
+  margin-top: 15px;
+}
+.tl-nearest-bus-dis:before{
+  content: "/";
+}
+
+/* arrrive-will */
+.tl-arrrive-will,.tl-arrrive {
+  height: 0px;
+  width: 0px;
+}
+
+.tl-arrrive::before, .tl-arrrive-will::before {
+  content: "\e600";
+  position: absolute;
+  left: -8px;
+  /*color: #0BB20C;*/
+  color: #1296db;
+  font-family: 'iconfont';
+  font-size: 16px;
+}
+.tl-arrrive::before {
+  top: 0px;
+}
+.tl-arrrive-will::before {
+  top: -20px;
+}
+

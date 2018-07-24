@@ -1,0 +1,61 @@
+<view>
+  <view class="mylist-container">
+  <view class='mylist-portrait'>
+    <view class='zan-col zan-col-6 mylist-center'>
+      <image src="{{avatarUrl}}" class='mylist-img'></image>
+    </view>
+    <view class='zan-col zan-col-18 mylist-center1'>
+      <view class='zan-col zan-col-24'>
+        {{nickName}}
+      </view>
+      <view class='zan-col zan-col-24 mylist-dress'>
+        {{currentCity}}
+      </view>
+    </view>
+  </view>
+  <view class='mylist-top'></view>
+  <!--设置  -->
+  <view class='mylist-setUp'>
+    <view class='mylist-setUp-title'>设置</view>
+    <view class='mylist-setUp-top'>
+      <view class='zan-col zan-col-2 mylist-left'>
+        <image style="width: 20px; height: 20px;margin-top:15px;" src="../../image/refresh.png"></image>
+      </view>
+      <view class='zan-col zan-col-17 mylist-center'>自动刷新</view>
+      <view class='zan-col zan-col-5 mylist-right'>
+        <switch checked="{{auto_refresh}}" bindchange="setAutoRefresh" />
+      </view>
+    </view>
+    <view class='mylist-setUp-top'>
+      <view class='zan-col zan-col-2 mylist-left'>
+        <image style="width: 20px; height: 20px;margin-top:15px;" src="../../image/refresh_interval_disable.png"></image>
+      </view>
+      <view class='zan-col zan-col-5 mylist-center'>刷新间隔</view>
+      <view class='zan-col zan-col-16 mylist-right-slider'>
+        <slider disabled="{{!auto_refresh}}" bindchange="setRefreshTime" value="{{refresh_time}}" show-value step="10" min="10" max="60" />
+      </view>
+      <view class='zan-col zan-col-1 mylist-miao'>
+        秒
+      </view>
+    </view>
+  </view>
+  <view class='mylist-top'></view>
+  <view class="my-menu weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg">
+          <view class="weui-cell" bindtap="showPayPic">
+            <view class="my-item-icon-view weui-cell__hd">
+              <image class="my-item-icon" src="../../image/pay_icon.png" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>打赏</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

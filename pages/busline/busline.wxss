@@ -1,0 +1,129 @@
+@import "../../style/timeline.wxss";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.bus-head {
+  width: 100%;
+  top: 0px;
+  margin-left: 12px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+.bus-container {
+  width: 99%;
+}
+
+.bus-head .bus-refresh {
+  width: 80px;
+}
+
+.autoRefresh-true {
+  color: #21b1fd;
+}
+
+.autoRefresh-false {
+  color: gray;
+}
+
+.bus-head .bus-linename {
+  margin-right: 15px;
+}
+
+.bus-head .bus-starsn {
+  margin-right: 3px;
+}
+
+.bus-head .bus-endsn {
+  margin-left: 3px;
+}
+
+.bus-detail {
+  display: flex;
+  flex-direction: row;
+  font-size: 11px;
+  color: #bfbfbf;
+  font-weight: 300;
+}
+
+.bus-detail-column {
+  margin-right: 20px;
+}
+
+.bus-detail-lh {
+  margin-right: 5px;
+}
+
+.bus-tip {
+  display: flex;
+  flex-direction: row;
+  font-size: 11px;
+  color: #bfbfbf;
+  font-weight: 400;
+  background-color: #eef6fb;
+}
+
+.bus-tip .icon-gongjiao {
+  /*margin-top: -2px;*/
+  color: #60aed6;
+  font-family: 'iconfont';
+  font-size: 12px;
+}
+
+.bus-tip .icon-nobus {
+  color: #bfbfbf;
+}
+
+.bus-tip .bus-refresh {
+  /*margin-top: -2px;*/
+  position: absolute;
+  margin-top: -5px;
+  right: 30px;
+  font-family: 'iconfont';
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.bus-tip .bus-refresh .icon-circularrefresh {
+  margin-right: 3px;
+}
+
+/*
+.searchbar-result {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    z-index: 1;
+}*/
+
+.bus-reserve {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #1296db;
+  z-index: 1;
+}
+
+.bus-reserve-icon {
+  position: relative;
+  /*margin-left: 3px;
+    margin-top: -2px;*/
+  left: 6px;
+  top: 1px;
+}
+
+.bus-reserve .iconfont {
+  color: white;
+  font-size: 17px;
+}

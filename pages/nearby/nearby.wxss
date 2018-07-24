@@ -1,0 +1,203 @@
+/**index.wxss**/
+@import "../../style/alifont.wxss";
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.camera-main {
+  width: 100vw;
+  overflow: hidden;
+  /* padding: 10px;  */
+}
+
+.camera-main {
+  width: 100%;
+  height: auto;
+  /* min-height: 100vh; */
+  justify-content: center;
+  margin-top: 0rpx;
+}
+
+.camera-card {
+  height: auto;
+  min-height: 50rpx;
+  width: 100vw;
+  background: #fefefe;
+  /* border-bottom: 1px solid #000; */
+  margin: 0rpx auto;
+  justify-content: center;
+  color: #333;
+  border-radius: 10rpx;
+}
+
+.camera-card-top {
+  line-height: 40rpx;
+  margin-top: 10px;
+}
+
+.card-top-action {
+  border-bottom: 2rpx solid #e9eaec;
+}
+
+.card-icon {
+  text-align: center;
+}
+
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+  height: 18px;
+  margin-top: -6px;
+}
+
+.card-title1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+}
+
+.card-title1 image {
+  width: 25px;
+  height: 25px;
+  margin-top: 4px;
+}
+
+.card-title-bottom {
+  font-size: 12px;
+  font-family: "宋体";
+  color: #8a8a8a;
+}
+
+.card-title-bottom-left {
+  float: left;
+}
+
+.card-title-bottom-right {
+  float: left;
+}
+
+.card-r {
+  text-align: center;
+}
+
+.not-action {
+  transform: rotate(-90deg);
+  transition-duration: 0.3s;
+  transition: 0.3s;
+}
+
+.action {
+  transform: rotate(90deg);
+  transition-duration: 0.3s;
+  transition: 0.3s;
+}
+
+/*  */
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.camera-card-list {
+  height: auto;
+  margin: 0 auto;
+}
+
+.camera-card-list-title {
+  font-size: 26rpx;
+  margin: 10rpx 0px;
+  padding-left: 30rpx;
+}
+
+.top-wenzi {
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.camera-card-list .online {
+  color: #093;
+}
+
+.not-online {
+  color: #c33;
+}
+
+.aaaa {
+  width: 100vw;
+  height: 60rpx;
+  background: #c00;
+}
+
+.hide {
+  display: none;
+}
+
+.icon-gongjiaochezhan {
+  border: 1px solid #093;
+  border-radius: 50%;
+  background-color: #093;
+  color: #fff;
+  font-size: 20px;
+}
+
+.icon-gongjiao {
+  font-size: 22px;
+  padding-top: 3px;
+}
+
+.text-wenzi {
+  font-size: 10px;
+  color: #8a8a8a;
+  /* margin-left: 3px; */
+}
+
+.bus-station-linebuses {
+  /* position: absolute; */
+  margin-top: 8px;
+  /* right: 30px; */
+  display: flex;
+  flex-direction: row;
+}
+
+.bus-station-linebus {
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 10px;
+  background-color: #1296db;
+  color: white;
+  /* border-radius: 9px;     */
+}
+
+.bus-station-linebus:nth-of-type(2) {
+  background-color: #0bb20c;
+}
+
+.bus-station-linebus:nth-of-type(3) {
+  background-color: #0bb20c;
+}
+
+.bus-station-linebus-nearby {
+  background-color: #e64340;
+}
+
+.bus-station-interval {
+  font-size: 11px;
+}
+
+.tl-nearest-buses {
+  display: none;
+}

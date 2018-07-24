@@ -1,0 +1,11 @@
+<view class="container">
+  <view class='recommend-list' wx:for="{{likeline}}" bindtap='jumpToBusline' data-city="{{item.city}}" data-lineno="{{item.lineno}}" data-linedir="{{item.linedir}}" data-sn="{{item.sn}}">
+    <view class='zan-col zan-col-6 recommend-train'>
+      {{item.lineno}}路
+    </view>
+    <view class='zan-col zan-col-18 recommend-wenzi'>
+      <view class='recommend-right'>{{item.lineno}}路</view>
+      <view class='recommend-top'>{{item.startsn}} - {{item.endsn}}</view>
+    </view>
+  </view>
+</view>

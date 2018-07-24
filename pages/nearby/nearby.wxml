@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<scroll-view class="container">
+  <view class='camera-main'>
+    <!-- 一个分组 -->
+    <view class="camera-card" wx:for="{{nearestStation}}" wx:for-item="item" wx:for-index="key">
+      <view class="zan-row camera-card-top card-top-action" data-index="{{key}}" bindtap="showCardList">
+        <view class="zan-col zan-col-3 card-icon">
+          <i class="iconfont icon-gongjiaochezhan"></i>
+        </view>
+        <view class="zan-col zan-col-17">
+          <view class="zan-col zan-col-24 card-title">
+            {{item.sn}}
+          </view>
+          <view class='card-title-bottom zan-col-24'>
+            <view class='card-title-bottom-left zan-col-8'>经停:{{item.lines.length}}条</view>
+            <view class='card-title-bottom-right zan-col-16'>实时:{{item.lines.length}}条</view>
+          </view>
+        </view>
+        <view class="zan-col zan-col-4 card-r {{cardIndex == key ? 'action':'not-action'}}">
+          <view class="zan-icon zan-icon-arrow" style="color: #000000;font-size:12px"></view>
+        </view>
+      </view>
+      <view class="zan-row camera-card-list {{cardIndex == key ? 'show':'hide'}}" wx:for="{{item.lines}}" wx:for-item="busl" wx:key="busl" wx:for-index="buslIndex">
+        <view class="camera-card-list-title" data-city="{{item.city}}" data-lineno="{{busl.lineno}}" data-linedir="{{busl.linedir}}" data-sn="{{item.sn}}" bindtap="{{busl.issupport ? 'jumpToBusline':''}}">
+          <!--收藏  -->
+          <view class="zan-col zan-col-2">
+            <i class="iconfont icon-gongjiao bus-station-lineicon-{{busl.issupport}}"></i>
+          </view>
+          <view class="zan-col zan-col-12">
+            <view>{{busl.lineno}}路
+              <text class='text-wenzi'>{{busl.startsn}}<text>-</text>{{busl.endsn}}</text>
+            </view>
+            <view class='top-wenzi'>下一站:{{busl.nextsn}}</view>
+          </view>
+          <view class="zan-col zan-col-7">
+            <view class="bus-station-linebuses">
+              <view class="bus-station-linebus {{busl.stationIndex - bus.order <= 2 ? 'bus-station-linebus-nearby':''}}" wx:for="{{busl.buses}}" wx:for-item="bus" wx:if="{{busl.stationIndex>0 && index<2 && busl.stationIndex > 0}}" wx:key="linebus">
+                <text wx:if="{{busl.stationIndex - bus.order > 0}}" class="bus-station-interval">{{busl.stationIndex - bus.order}}站</text>
+                <text wx:elif="{{bus.status==1}}" class="bus-station-interval">到站</text>
+                <text wx:elif="bus.distanceToSc > 0" class="bus-station-interval">{{bus.distanceToSc}}米</text>
+                <text wx:else class="bus-station-interval">即将到站</text>
+              </view>
+            </view>
+          </view>
+          <view class="zan-col zan-col-3 card-title1" data-line="{{busl}}" data-city="{{item.city}}" data-sn="{{item.sn}}" catchtap='likeLine'>
+            <image wx:if="{{busl.isLike != true}}" src='../../image/like_1.png'></image>
+            <image wx:if="{{busl.isLike == true}}" src='../../image/like_fill_1.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- end 一个分组 -->
+  </view>
+</scroll-view>

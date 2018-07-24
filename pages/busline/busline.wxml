@@ -1,0 +1,77 @@
+<view class="page">
+  <view class="bus-reserve" wx:if="{{busline.otherDirIds.length>0}}" bindtap="buslineReserve">
+    <view class="bus-reserve-icon">
+      <i class="iconfont icon-zhuanhuan"></i>
+    </view>
+  </view>
+
+  <!-- buline -->
+  <view class="bus-head">
+    <view class="bus-name">
+      <text class="bus-linename">{{busline.name}}路</text>
+      <text class="bus-starsn">{{busline.startsn}}</text>
+      <text>-</text>
+      <text class="bus-endsn">{{busline.endsn}}</text>
+    </view>
+    <view class="bus-detail">
+      <view class="bus-detail-column">
+        <text class="bus-detail-lh">首班</text>
+        <text class="bus-lineno">{{busline.firstTime}}</text>
+      </view>
+      <view class="bus-detail-column">
+        <text class="bus-detail-lh">末班</text>
+        <text class="bus-detail-value">{{busline.lastTime}}</text>
+      </view>
+      <view class="bus-detail-column">
+        <text class="bus-detail-lh">票价</text>
+        <text class="bus-detail-value">{{busline.price}}</text>
+      </view>
+      <view class="bus-detail-column">
+        <text class="bus-detail-lh">总站数</text>
+        <text class="bus-detail-value">{{busline.stationsNum}}</text>
+      </view>
+    </view>
+    <view class="bus-tip">
+      <view wx:if="{{buses.length > 0}}">
+        <i class="iconfont icon-gongjiao"></i>
+        <text>{{buses.length}}辆公交正在运行</text>
+      </view>
+      <view wx:else>
+        <i class="iconfont icon-gongjiao icon-nobus"></i>
+        <text>未获取到任何运行的公交车</text>
+      </view>
+      <!-- <view class="bus-refresh autoRefresh-{{autoRefresh}}" bindtap="setAutoRefresh">
+        <i class="iconfont icon-circularrefresh"></i>
+        <text>{{autoRefresh?'自动刷新':'已关闭'}}</text>
+      </view> -->
+    </view>
+  </view>
+
+  <!--buscontainer-->
+  <scroll-view class="bus-container" scroll-y="true" style="height: {{screenHeight-63}}px;" scroll-into-view="station_{{chooseline.order-3}}" scroll-top="0">
+    <view class="timeline">
+      <view wx:for="{{busline.stations}}" wx:for-item="station" wx:key="stations" class="{{chooseline.sn == station.sn ? 'tl-local':'tl-node'}}" id="station_{{station.order}}">
+        <view wx:key="buses" wx:for="{{buses}}" wx:for-item="bus" wx:if="{{ bus.order == station.order}}">
+          <view wx:if="{{ bus.status == 1 }}" class="tl-arrrive"></view>
+          <view wx:else class="tl-arrrive-will"></view>
+        </view>
+        <text class="tl-station">{{station.sn}}</text>
+        <view class="tl-nearest-buses">
+          <view class="tl-nearest-bus" wx:if="{{chooseline.sn == station.sn}}" wx:for="{{nearbuses}}" wx:key="nearbybus" wx:for-item="nbus">
+            <view wx:if="{{chooseline.order-nbus.order==0 && nbus.status==1}}">
+              <text class="tl-nearest-bus-num">到</text>
+            </view>
+            <view wx:elif="{{chooseline.order-nbus.order==0 && nbus.status==0.5}}">
+              <text class="tl-nearest-bus-num">即将到</text>
+              <text class="tl-nearest-bus-dis">{{nbus.distanceToSc}}米</text>
+            </view>
+            <view wx:elif="{{chooseline.order-nbus.order>0}}">
+              <text class="tl-nearest-bus-num">{{chooseline.order-nbus.order}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- END buscontainer -->
+</view>
